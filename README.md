@@ -31,3 +31,5 @@ We provide a well-trained model for users to predict the ligandability of cystei
 python ./codes/DeepCoSI_prediction.py 4hqr.pdb example
 # Please check the prediction result in the build directory.
 ```
+# A public dataset
+We profiled the structures in RCSB PDB to identify potential cysteines for covalent ligand discovery. Please use it in http://cadd.zju.edu.cn/cidb/deepcosi/cys.
