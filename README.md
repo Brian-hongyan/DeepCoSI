@@ -29,5 +29,5 @@ We provide a well-trained model for users to predict the ligandability of cystei
 ```
 # example
 python ./codes/DeepCoSI_prediction.py 4hqr.pdb example
-Please check the prediction result in the build directory.
+# Please check the prediction result in the build directory.
 ```
