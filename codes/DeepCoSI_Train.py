@@ -54,6 +54,8 @@ def run_a_eval_epoch(model, validation_dataloader, device):
             key.append(keys)
     return true, pred, key
 
+cmd = 'mkdir ./example/trainset ; mkdir ./example/validset ; mkdir ./example/testset ; mkdir ./example/stats ; mkdir ./example/models'
+os.system(cmd)
 # path for RDKit molecular file
 data_path = './example/RDKit_mols'
 keys = os.listdir(data_path)
