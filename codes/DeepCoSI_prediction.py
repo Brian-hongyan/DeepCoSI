@@ -33,14 +33,14 @@ def detect_cys(pdb):
     ls = []
     ls_id = []
     i = 0
-    # 先排除那部分已经形成二硫键和其他共价键的半胱氨酸
+    
     for line in pdb_lines:
         if line.startswith('LINK'):
             # (chain,resi_id)
             links.append((line[21:22], line[22:26].strip()))
             links.append((line[51:52], line[52:56].strip()))
         elif line.startswith('ATOM'):
-            # 尽快终止循环，节省时间
+            
             break
     for line in pdb_lines:
         if line.startswith('SSBOND'):
@@ -118,7 +118,7 @@ if __name__ == '__main__':
     argparser.add_argument('--n', type=int, default=1,help="number of processors")
     args = argparser.parse_args()
     print(args)
-
+    correction = 0.2
     pdb = args.pdb.replace('.pdb','')
     job_name = args.job_name
     comline = f'mkdir build/{job_name}_pocket && mkdir build/{job_name}_pickle && mkdir build/{job_name}_dataset && mkdir build/{job_name}_graphs && mkdir build/{job_name}_chimera_py'
@@ -188,7 +188,7 @@ if __name__ == '__main__':
                                       collate_fn=collate_fn, drop_last=True)
         test_true, test_pred, te_keys = run_a_eval_epoch(DeepCoSI_Model, test_dataloader, device)
         test_true = np.concatenate(np.array(test_true), 0).flatten()
-        test_pred = np.concatenate(np.array(test_pred), 0).flatten()
+        test_pred = np.concatenate(np.array(test_pred), 0).flatten()+correction
         te_keys = np.concatenate(np.array(te_keys), 0).flatten()
         pd_te = pd.DataFrame(
             {'key': te_keys,  'probability': test_pred})
