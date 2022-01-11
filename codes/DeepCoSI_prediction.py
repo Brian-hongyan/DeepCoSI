@@ -184,7 +184,7 @@ if __name__ == '__main__':
         device = torch.device("cuda:%s" % args.gpuid if False else "cpu")
         DeepCoSI_Model.to(device)
         DeepCoSI_Model.load_state_dict(torch.load(Local,map_location=torch.device('cpu'))['model_state_dict'])
-        test_dataloader = DataLoaderX(test_dataset, 8, shuffle=False, num_workers=0,
+        test_dataloader = DataLoaderX(test_dataset, 1, shuffle=False, num_workers=0,
                                       collate_fn=collate_fn, drop_last=True)
         test_true, test_pred, te_keys = run_a_eval_epoch(DeepCoSI_Model, test_dataloader, device)
         test_true = np.concatenate(np.array(test_true), 0).flatten()
