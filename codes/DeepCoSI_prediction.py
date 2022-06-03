@@ -173,7 +173,7 @@ if __name__ == '__main__':
                                             graph_ls_path='./build/%s_dataset' % job_name,
                                             graph_dic_path='./build/%s_graphs' % job_name,
                                             num_process=num_process, path_marker=path_marker)
-        Local = './codes/DeepCoSI_model.pth'
+        Local = './codes/DeepCoSI_model_v1.pth'
         print('Load model %s' % Local)
         dt = datetime.datetime.now()
         # model
