@@ -15,6 +15,9 @@ warnings.filterwarnings('ignore')
 import argparse
 import datetime
 
+# The path for chimera in your computer
+chimera_path = '/home/user/chimera/bin'
+
 
 def pdb_process(pdb):
     pdb_file = open(f'./{pdb}.pdb', 'r')
@@ -73,7 +76,10 @@ def get_pocket(samlpe_id, pdb, chain, position, distance, jobname):
     with open(filename, 'w') as f:
         f.write(filecontent)
     try:
-        cmdline = 'module load chimera && chimera --nogui --silent --script %s' % filename
+        # Load your chimera
+        # cmdline = 'module load chimera && chimera --nogui --silent --script %s' % filename
+        # Or specify the path
+        cmdline = '%s/chimera --nogui --silent --script %s' % (chimera_path,filename)
         os.system(cmdline)
     except:
         print('complex %s generation failed...' % samlpe_id)
