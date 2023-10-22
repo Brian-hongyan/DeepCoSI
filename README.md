@@ -1,5 +1,5 @@
 # Deep Covalent Site Identification (DeepCoSI)
-  DeepCoSI: a Structure-based Deep Graph Learning Network Method for Covalent Binding Site Identification.
+  [DeepCoSI](https://spj.science.org/doi/abs/10.34133/2022/9873564): a Structure-based Deep Graph Learning Network Method for Covalent Binding Site Identification.
   
 ![error](https://github.com/Brian-hongyan/DeepCoSI/blob/main/deepcosi.jpg)
 
