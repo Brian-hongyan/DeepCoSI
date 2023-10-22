@@ -36,7 +36,19 @@ We profiled the structures in RCSB PDB to identify potential cysteines for coval
 
 # Cite us
 ```
-Hongyan Du Dejun Jiang Junbo Gao Xujun Zhang Lingxiao Jiang Yundian Zeng Zhenxing Wu Chao Shen Lei Xu Dongsheng Cao et al. Proteome-Wide Profiling of the Covalent-Druggable Cysteines with a Structure-Based Deep Graph Learning Network. Research. 2022;2022:DOI:10.34133/2022/9873564
+@article{
+doi:10.34133/2022/9873564,
+author = {Hongyan Du  and Dejun Jiang  and Junbo Gao  and Xujun Zhang  and Lingxiao Jiang  and Yundian Zeng  and Zhenxing Wu  and Chao Shen  and Lei Xu  and Dongsheng Cao  and Tingjun Hou  and Peichen Pan },
+title = {Proteome-Wide Profiling of the Covalent-Druggable Cysteines with a Structure-Based Deep Graph Learning Network},
+journal = {Research},
+volume = {2022},
+number = {},
+pages = {},
+year = {2022},
+doi = {10.34133/2022/9873564},
+URL = {https://spj.science.org/doi/abs/10.34133/2022/9873564},
+eprint = {https://spj.science.org/doi/pdf/10.34133/2022/9873564},
+}
 ```
 
 
