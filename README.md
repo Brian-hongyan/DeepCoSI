@@ -33,3 +33,10 @@ python ./codes/DeepCoSI_prediction.py 4hqr.pdb example
 ```
 # A public dataset
 We profiled the structures in RCSB PDB to identify potential cysteines for covalent ligand discovery. Please use it in http://cadd.zju.edu.cn/cidb/deepcosi/cys.
+
+# Cite us
+```
+Hongyan Du Dejun Jiang Junbo Gao Xujun Zhang Lingxiao Jiang Yundian Zeng Zhenxing Wu Chao Shen Lei Xu Dongsheng Cao et al. Proteome-Wide Profiling of the Covalent-Druggable Cysteines with a Structure-Based Deep Graph Learning Network. Research. 2022;2022:DOI:10.34133/2022/9873564
+```
+
+
